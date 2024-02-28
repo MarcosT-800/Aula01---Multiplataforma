@@ -18,6 +18,11 @@ app.get("/cadastrar", function(req, res) {
     console.log("Rota de Cadastro");
 })
 
+app.get("/listar:produto", function(req, res) {
+    console.log(req.params.produto)
+    res.send("Página Listar: " + req.params.produto)
+})
+
 app.post("/inserir", function(req, res) {
     console.log("usuário inserido");
 })
